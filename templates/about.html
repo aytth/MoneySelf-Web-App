@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dev Website</title>
+    <title>MoneySelf</title>
     <!-- <link rel="stylesheet" href="C:\CS Projects\Frontend Basic\templates\styles.css"/> -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
     <link
@@ -27,16 +27,16 @@
         </div>
         <ul class="navbar__menu">
           <li class="navbar__item">
-            <a href="/home.html" class="navbar__links">Home</a>
+            <a href="/" class="navbar__links">Home</a>
           </li>
           <li class="navbar__item">
-            <a href="/tech" class="navbar__links">About Us</a>
+            <a href="/about" class="navbar__links">About Us</a>
           </li>
           <li class="navbar__item">
-            <a href="/products" class="navbar__links">Login</a>
+            <a href="/login" class="navbar__links">Login</a>
           </li>
           <li class="navbar__btn">
-            <a href="/sign-up" class="button">Sign Up</a>
+            <a href="/signup" class="button">Sign Up</a>
           </li>
         </ul>
       </div>
@@ -44,15 +44,74 @@
     <div class="main">
       <div class="main__container">
         <div class="main__content">
-          <h1>TECH SECTION</h1>
-          <p>Check out our technologies</p>
+          <h1>About Us</h1>
+          <p>Our mission is the following</p>
           <button class="main__btn"><a href="#">Get Started</a></button>
         </div>
         <div class="main__img-container">
-          <img id="main__img" src="C:\CS Projects\Frontend Basic\images\pic2.jpg" />
+          <img id="main__img" src="{{ url_for('static',filename='about_bg.svg') }}" />
         </div>
       </div>
     </div>
-    <script src="C:\CS Projects\Frontend Basic\animation.js"></script>
+
+    <!-- FOOTER CODE -->
+    <div class="footer__container">
+      <div class="footer__links">
+        <div class="footer__link--wrapper">
+          <div class="footer__link--items">
+            <h2>About Us</h2>
+            <a href="/sign__up">How it works</a>
+            <a href="/">Terms of Service</a>
+          </div>
+          <div class="footer__link--items">
+            <h2>Contact Us</h2>
+            <a href="/">Contact</a> <a href="/">Support</a>
+          </div>
+        </div>
+        <div class="footer__link--wrapper">
+          <div class="footer__link--items">
+            <h2>Social Media</h2>
+            <a href="/">Instagram</a>
+            <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">Youtube</a> <a href="/">Twitter</a>
+          </div>
+        </div>
+      </div>
+      <section class="social__media">
+        <div class="social__media--wrap">
+          <div class="footer__logo">
+            <a href="/" id="footer__logo">MoneySelf</a>
+          </div>
+          <p class="website__rights">© MoneySelf 2023. All rights reserved</p>
+          <div class="social__icons">
+            <a
+              class="social__icon--link"
+              href="/"
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              class="social__icon--link"
+              href="https://youtu.be/dQw4w9WgXcQ"
+              target="_blank"
+              aria-label="Youtube"
+            >
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a
+              class="social__icon--link"
+              href="/"
+              target="_blank"
+              aria-label="Twitter"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- END OF FOOTER CODE -->
+    <script src="{{ url_for('static',filename='animation.js') }}"></script>
   </body>
 </html>

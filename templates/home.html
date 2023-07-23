@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dev Website</title>
+    <title>MoneySelf</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
     <!-- <link rel="stylesheet" href="seco.css"> -->
     <link
@@ -29,13 +29,13 @@
                     <a href="/" class="navbar__links"> Home </a>
                 </li>
                 <li class="navbar__item">
-                    <a href="/about.html" class="navbar__links"> About Us </a>
+                    <a href="/about" class="navbar__links"> About Us </a>
                 </li>
                 <li class="navbar__item">
-                    <a href="/" class="navbar__links"> Login </a>
+                    <a href="/login" class="navbar__links"> Login </a>
                 </li>
                 <li class="navbar__btn">
-                    <a href="/" class="button"> Sign Up </a>
+                    <a href="/signup" class="button"> Sign Up </a>
                 </li>
             </ul>
         </div>
@@ -52,7 +52,7 @@
                 </button>
             </div>
             <div class="main__img--container">
-                <img src="C:\CS Projects\Frontend Basic\images\undraw_investing_re_bov7.svg" alt="pic" id="main__img">
+                <img src="{{ url_for('static',filename='money_bg_image.svg') }}" alt="pic" id="main__img">
             </div>
         </div>
     </div>
@@ -63,7 +63,7 @@
           <div class="footer__link--wrapper">
             <div class="footer__link--items">
               <h2>About Us</h2>
-              <a href="/sign__up">How it works</a> <a href="/">Testimonials</a>
+              <a href="/sign__up">How it works</a>
               <a href="/">Terms of Service</a>
             </div>
             <div class="footer__link--items">
@@ -72,15 +72,10 @@
             </div>
           </div>
           <div class="footer__link--wrapper">
-            <!-- <div class="footer__link--items">
-              <h2>Videos</h2>
-              <a href="/">Submit Video</a> <a href="/">Ambassadors</a>
-              <a href="/">Agency</a> <a href="/">Influencer</a>
-            </div> -->
             <div class="footer__link--items">
               <h2>Social Media</h2>
               <a href="/">Instagram</a>
-              <a href="/">Youtube</a> <a href="/">Twitter</a>
+              <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">Youtube</a> <a href="/">Twitter</a>
             </div>
           </div>
         </div>
@@ -91,14 +86,6 @@
             </div>
             <p class="website__rights">© MoneySelf 2023. All rights reserved</p>
             <div class="social__icons">
-              <!-- <a
-                class="social__icon--link"
-                href="/"
-                target="_blank"
-                aria-label="Facebook"
-              >
-                <i class="fab fa-facebook"></i>
-              </a> -->
               <a
                 class="social__icon--link"
                 href="/"
@@ -109,7 +96,7 @@
               </a>
               <a
                 class="social__icon--link"
-                href="//www.youtube.com/channel/UCsKsymTY_4BYR-wytLjex7A?view_as=subscriber"
+                href="https://youtu.be/dQw4w9WgXcQ"
                 target="_blank"
                 aria-label="Youtube"
               >
@@ -123,18 +110,10 @@
               >
                 <i class="fab fa-twitter"></i>
               </a>
-              <!-- <a
-                class="social__icon--link"
-                href="/"
-                target="_blank"
-                aria-label="LinkedIn"
-              >
-                <i class="fab fa-linkedin"></i>
-              </a> -->
             </div>
           </div>
         </section>
       </div>
-    <script src="C:\CS Projects\Frontend Basic\animation.js"></script>
+    <script src="{{ url_for('static',filename='animation.js') }}"></script>
 </body>
 </html>
