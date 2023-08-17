@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,4 +9,103 @@
 <body>
     
 </body>
-</html>
+</html> -->
+
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="C:\CS Projects\Frontend Basic\static\register.css">
+    <script defer src="C:\CS Projects\Frontend Basic\static\registercode.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form id="form" action="/">
+            <h1>Registration</h1>
+            <div class="input-control">
+                <label for="username">Username</label>
+                <input id="username" name="username" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="password">Password</label>
+                <input id="password"name="password" type="password">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="password2">Password again</label>
+                <input id="password2"name="password2" type="password">
+                <div class="error"></div>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Login / Sign Up</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+    <link rel="stylesheet" href="{{ url_for('static', filename='itertwo.css') }}">
+</head>
+<body>
+    <div class="container">
+        <form class="form" id="login">
+            <h1 class="form__title">Login</h1>
+            <div class="form__message form__message--error"></div>
+            <div class="form__input-group">
+                <input type="text" class="form__input" autofocus placeholder="Email Address">
+                <div class="form__input-error-message"></div>
+            </div>
+            <div class="form__input-group">
+                <input type="password" class="form__input" autofocus placeholder="Password">
+                <div class="form__input-error-message"></div>
+            </div>
+            <button class="form__button" type="submit">Continue</button>
+            <p class="form__text">
+                <a href="#" class="form__link">Forgot your password?</a>
+            </p>
+            <p class="form__text">
+                <a class="form__link" href="./" id="linkCreateAccount">Don't have an account? Create account</a>
+            </p>
+        </form>
+        <form class="form form--hidden" id="createAccount">
+            <h1 class="form__title">Create Account</h1>
+            <div class="form__message form__message--error"></div>
+            <div class="form__input-group">
+                <input type="text" id="signupUsername" class="form__input" autofocus placeholder="Username">
+                <div class="form__input-error-message"></div>
+            </div>
+            <div class="form__input-group">
+                <input type="text" class="form__input" autofocus placeholder="Email Address">
+                <div class="form__input-error-message"></div>
+            </div>
+            <div class="form__input-group">
+                <input type="password" class="form__input" autofocus placeholder="Password">
+                <div class="form__input-error-message"></div>
+            </div>
+            <div class="form__input-group">
+                <input type="password" class="form__input" autofocus placeholder="Confirm password">
+                <div class="form__input-error-message"></div>
+            </div>
+            <button class="form__button" type="submit">Continue</button>
+            <p class="form__text">
+                <a class="form__link" href="./" id="linkLogin">Already have an account? Sign in</a>
+            </p>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='itertwocd.js') }}"></script>
+</body>
